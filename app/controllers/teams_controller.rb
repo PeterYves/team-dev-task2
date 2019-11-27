@@ -64,6 +64,7 @@ class TeamsController < ApplicationController
   end
   def allow_only_teamleader_edit_team
     if current_user.id != @team.owner.id
-      redirect_to @team , notice:  'Only Team Leader can edit team!'  
+      redirect_to @team , notice:  'Only Team Leader can edit team!' 
+    end 
   end
 end
